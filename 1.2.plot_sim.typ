@@ -16,8 +16,8 @@
 
 #figure(caption: "Simulated input characteristics")[
   #lq.diagram(
-    width: 100%,
-    height: 33%,
+    width: 80%,
+    height: 23%,
     // title: [],
     xlabel: [*$V_(B E)$* [V]],
     ylabel: [*$I_B$* [#sym.mu A]],
@@ -49,20 +49,28 @@
 
 
 #show: lq.theme.skyline
-
-#figure(caption: "Simulated input characteristics")[
+#show: lq.set-grid(
+  stroke: black.transparentize(90%) + 0.55pt,
+  stroke-sub: black.transparentize(80%) + 0.1pt,
+  sub: true,
+)
+#figure(caption: [Simulated $beta "and" I_C "over" I_B$])[
   #lq.diagram(
-    width: 100%,
-    height: 33%,
+    width: 80%,
+    height: 29%,
     // title: [],
     xlabel: [*$I_B$* [$mu$A]],
     ylabel: [*$beta$* ],
     legend: (position: right + bottom),
     // xlim: (0, 0.9),
-    // ylim: (-0, 110),
+    ylim: (-800, 1710),
     //
     //
-    yaxis: (mirror: false),
+    yaxis: (
+      mirror: false,
+      exponent: 0,
+      subticks: 4,
+    ),
     lq.yaxis(
       position: right,
       label: [*$I_C$* [mA]],
@@ -89,4 +97,4 @@
     // lq.plot(vd_si, i_si, mark: ".", label: [1N4148 (Si Diode)], mark-size: 0pt),
     // lq.plot(vd_z, i_z, mark: ".", label: [ZD3V9 (Zener Diode)], mark-size: 0pt),
   )
-]
+] <beta>

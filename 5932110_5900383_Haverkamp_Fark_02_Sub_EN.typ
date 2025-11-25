@@ -1,7 +1,7 @@
 #import "@preview/lilaq:0.5.0" as lq
 
 #set page(background: image("assets/frontpage.jpg"))
-#v(206pt)
+#v(208pt)
 #h(105pt)
 Jakob Haverkamp
 #h(155pt)
@@ -37,13 +37,21 @@ Milan Fark
 
 == 2.2.1 Simulation
 
+The goal was to simulate the behaviour of a BC547B bipolar circuit.
+
 === Circuit Diagrams:
 
+// TODO: circuit diagrams
+
 === Plots:
+#include "1.2.plot_sim.typ"
 
 === Text Questions:
 
-- At Values below
+(d) the very first values are $approx$ -1, then there are really high values up to 1700 and low values to -700, which happen due to really small numbers in the divisor. For slightly higher voltages, the value for $beta approx 320$.
+
+(f)
+Beta is not constant as we can see in #text(blue)[@beta], instead it slowly goes from $approx 320$ to $approx 260$.
 
 === Conclusion:
 
@@ -72,7 +80,7 @@ Milan Fark
 === Circuit Diagrams:
 
 === Plots:
-#include "1.2.plot_sim.typ"
+#include "1.3.plot_sim.typ"
 
 === Text Questions:
 
