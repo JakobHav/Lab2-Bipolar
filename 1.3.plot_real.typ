@@ -5,13 +5,13 @@
 
 #show: lq.theme.skyline
 
-#figure(caption: [Measured IV-Curves of all three Diodes #footnote[Zener Diode mirrored at (0, 0) for better visual]])[
+#figure(caption: [])[
   #lq.diagram(
     width: 80%,
     height: 27%,
     // title: [],
-    xlabel: [*Voltage Drop* [V]],
-    ylabel: [*Current* [mA]],
+    xlabel: [** []],
+    ylabel: [** []],
     legend: (position: left + top),
     xlim: (-5, 1),
     // ylim: (-0, 4),
