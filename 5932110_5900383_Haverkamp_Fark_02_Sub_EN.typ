@@ -120,27 +120,6 @@ In this section, we measured the values we simulated earlier. Fi To calculate $I
 $I_C$ betweeen pins 1 and 2 of _JP8_:  8.72 mA
 
 
-IC values
-0.00
-0.00
-0.01
-0.01
-0.01
-0.04
-0.27
-0.67
-1.15
-1.65
-2.17
-2.68
-3.20
-3.73
-4.26
-4.78
-5.30
-5.82
-6.34
-6.85
 
 
 
@@ -201,7 +180,7 @@ The goal was to simulate and characterize a bipolar-based current source.
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice circuit diagram with $R_E = 200 Omega$ and $V_i$ = 2.5V])[
-  #image("assets/2.4.1.circuit.jpg", width: 50%)
+  #image("assets/2.4.1.circuit.jpg", width: 40%)
 ]
 === Plots:
 #include "1.4.plot_sim.typ"
