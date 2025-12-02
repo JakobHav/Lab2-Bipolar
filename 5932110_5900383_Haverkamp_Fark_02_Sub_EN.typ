@@ -23,8 +23,8 @@ Milan Fark
   prof: "Prof. Dr. Hans Zappe",
   semester: "WS 25/26",
   title: "Lab 1 - Diodes",
-  name: "jh1444, nr254",
   header_start: 2,
+  name: "jh1444, mf643",
   left_header: [Jakob Haverkamp \ Milan Fark \ jh1444, #h(5pt)mf643],
 )
 #counter(page).update(1)
@@ -37,6 +37,7 @@ Milan Fark
 
 == 2.2.1 Simulation
 
+=== Introduction
 The goal was to simulate the behaviour of a BC547B bipolar.
 
 === Circuit Diagrams:
@@ -96,7 +97,9 @@ Beta is not constant as we can see in #text(blue)[@beta], instead it slowly goes
 
 We successfully simulated the BC547B bipolar characteristics under different voltages and calculated its early voltages.
 
-= 2.2.2. Measurement
+== 2.2.2. Measurement
+
+=== Introduction
 
 == Circuit Diagrams:
 
@@ -121,10 +124,13 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 == 2.3.1 Simulation
 
+=== Introduction
+
 === Circuit Diagrams:
 
 
 === Plots:
+
 #include "1.3.plot_sim.typ"
 
 === Text Questions:
@@ -133,7 +139,9 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 = 2.3.2. Measurement
 
-== Circuit Diagrams:
+=== Introduction
+
+=== Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT Amplifier_ circuit])[
   #image("assets/2.3.2.circuit.jpg", width: 70%)
@@ -142,7 +150,7 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 #include "1.3.plot_real.typ"
 
-== Text Questions:
+=== Text Questions:
 
 === Conclusion
 
@@ -155,6 +163,7 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 == 2.4.1 Simulation
 
+=== Introduction
 The goal was to simulate and characterize a bipolar-based current source.
 
 === Circuit Diagrams:
@@ -184,7 +193,7 @@ The goal was to simulate and characterize a bipolar-based current source.
 
 = 2.4.2. Measurement
 
-== Circuit Diagrams:
+=== Circuit Diagrams:
 
 
 #figure(caption: [Schematic of the _BJT current source_ circuit])[
@@ -200,7 +209,7 @@ The goal was to simulate and characterize a bipolar-based current source.
 === Plots:
 #include "1.4.plot_real.typ"
 
-== Text Questions:
+=== Text Questions:
 
 
 === Conclusion
