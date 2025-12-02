@@ -90,3 +90,70 @@
     // lq.plot(vd_z, i_z, mark: ".", label: [ZD3V9 (Zener Diode)], mark-size: 0pt),
   )
 ]
+
+#let (_, ic0, vce0) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+#let (_, ic1, vce1) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+#let (_, ic2, vce2) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+#let (_, ic3, vce3) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+#let (_, ic4, vce4) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+
+#show: lq.theme.skyline
+
+#let ic0 = ic0.map(v => v / 200)
+#let ic1 = ic1.map(v => v / 200)
+#let ic2 = ic2.map(v => v / 200)
+#let ic3 = ic3.map(v => v / 200)
+#let ic4 = ic4.map(v => v / 200)
+
+#figure(caption: [Simulated current through $R_C$ plotted over collector-emitter voltage])[
+  #lq.diagram(
+    width: 80%,
+    height: 23%,
+    // title: [],
+    xlabel: [*$V_(C E)$* [V]],
+    ylabel: [*$I_C$* [mA]],
+    legend: (position: right + top),
+    // xlim: (-0.2, 7),
+    // ylim: (-0, 110),
+
+    cycle: (
+      it => {
+        set lq.style(stroke: (paint: white.darken(0%).transparentize(20%), dash: "solid", thickness: 1.3pt))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: orange.darken(0%), dash: "solid", thickness: 1.2pt))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: red.darken(0%), dash: "solid", thickness: 1.2pt))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: yellow.darken(5%), dash: "solid", thickness: 1.5pt))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1.2pt))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: blue.darken(0%), dash: "solid", thickness: 1.2pt))
+        it
+      },
+      it => {
+        set lq.style(stroke: (paint: purple.darken(0%).transparentize(20%), dash: "solid", thickness: 1.3pt))
+        it
+      },
+    ),
+
+
+    lq.plot(v0, i0, mark: ".", label: [#h(-20pt)$I_B [mu"A"]$], mark-size: 0pt),
+    // lq.plot(v5, i5, mark: ".", label: [42.9], mark-size: 0pt),
+    lq.plot(v4, i4, mark: ".", label: [33.0], mark-size: 0pt),
+    lq.plot(v3, i3, mark: ".", label: [23.1], mark-size: 0pt),
+    lq.plot(v2, i2, mark: ".", label: [13.2], mark-size: 0pt),
+    lq.plot(v1, i1, mark: ".", label: [3.6], mark-size: 0pt),
+    lq.plot(v0, i0, mark: ".", label: [0.0], mark-size: 0pt),
+  )
+]
