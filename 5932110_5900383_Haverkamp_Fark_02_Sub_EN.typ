@@ -19,10 +19,10 @@ Milan Fark
 #show: doc => conf(
   doc,
   subject: "Electronics Laboratory",
-  date: "12.11.2025",
+  date: "01.12.2025",
   prof: "Prof. Dr. Hans Zappe",
   semester: "WS 25/26",
-  title: "Lab 1 - Diodes",
+  title: "Lab 2 - Bipolars",
   header_start: 2,
   name: "jh1444, mf643",
   left_header: [Jakob Haverkamp \ Milan Fark \ jh1444, #h(5pt)mf643],
@@ -38,7 +38,7 @@ Milan Fark
 == 2.2.1 Simulation
 
 === Introduction
-The goal was to simulate the behaviour of a BC547B bipolar.
+The goal was to simulate the behaviour of a BC547B bipolar. Figure 1 shows the circuit diagram in LTSpice, Figure 2 shows the Voltage difference from Base to Emitter, when we slowly ramp up the input voltage, which is connected to the base end of the transistor. In Figure 3 
 
 === Circuit Diagrams:
 
@@ -52,7 +52,7 @@ The goal was to simulate the behaviour of a BC547B bipolar.
 
 === Text Questions:
 
-(d) the very first values are $beta approx$ -1, then there are really high values up to 1700 and low values to -700, which happen due to really small numbers in the divisor. For slightly higher voltages, the value for $beta approx 320$.
+(d) The very first values are $beta approx$ -1, then there are really high values up to 1700 and low values to -700, which happen due to really small numbers in the divisor. For slightly higher voltages, the value for $beta approx 320$.
 
 (f)
 Beta is not constant as we can see in #text(blue)[@beta], instead it slowly goes from $beta approx 320$ to $beta approx 260$.
@@ -74,7 +74,7 @@ Beta is not constant as we can see in #text(blue)[@beta], instead it slowly goes
         align: horizon,
         table.header([$I_B [mu A]$], [Early voltage [V]]),
         [0.0],
-        [0.618#footnote[This value is difficult to calculate, as $I_C$ is so close to 0V for the entire time wehen $I_B approx 0V$.]],
+        [0.618#footnote[This value is difficult to calculate, as $I_C$ is so close to 0V for the entire time when $I_B approx 0V$.]],
 
         [3.6], [-61.009],
         [13.2], [-39.105],

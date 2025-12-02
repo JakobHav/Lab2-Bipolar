@@ -83,11 +83,11 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: green.darken(10%), dash: "solid", thickness: 1.5pt))
+        set lq.style(stroke: (paint: green.darken(10%), dash: "solid", thickness: 1.3pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: green.darken(20%), dash: "dotted", thickness: 1pt))
+        set lq.style(stroke: (paint: green.darken(20%), dash: "dotted", thickness: 1.5pt))
         it
       },
     ),
@@ -131,23 +131,23 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: orange.darken(0%), dash: "densely-dotted", thickness: 1.5pt))
+        set lq.style(stroke: (paint: orange.darken(0%), dash: "solid", thickness: 1pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: red.darken(0%), dash: "dotted", thickness: 1.5pt))
+        set lq.style(stroke: (paint: red.darken(0%), dash: "solid", thickness: 1pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: yellow.darken(0%), dash: "loosely-dashed", thickness: 1.5pt))
+        set lq.style(stroke: (paint: yellow.darken(0%), dash: "solid", thickness: 1pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: green.darken(0%), dash: "dashed", thickness: 1.5pt))
+        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: blue.darken(0%), dash: "densely-dashed", thickness: 1.5pt))
+        set lq.style(stroke: (paint: blue.darken(0%), dash: "solid", thickness: 1pt))
         it
       },
       it => {
