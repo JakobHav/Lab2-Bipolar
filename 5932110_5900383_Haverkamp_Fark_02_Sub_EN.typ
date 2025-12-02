@@ -38,7 +38,7 @@ Milan Fark
 == 2.2.1 Simulation
 
 === Introduction
-The goal was to simulate the behaviour of a BC547B bipolar. Figure 1 shows the circuit diagram in LTSpice, Figure 2 shows the Voltage difference from Base to Emitter, when we slowly ramp up the input voltage, which is connected to the base end of the transistor. In Figure 3 
+The goal was to simulate the behaviour of a BC547B bipolar. Figure 1 shows the circuit diagram in LTSpice, Figure 2 shows the Voltage difference from Base to Emitter, when we slowly ramp up the input voltage, which is connected to the base end of the transistor. In Figure 3
 
 === Circuit Diagrams:
 
@@ -101,7 +101,7 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 === Introduction
 
-== Circuit Diagrams:
+=== Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT characteristics_ circuit])[
   #image("assets/2.2.2.circuit.jpg", width: 70%)
@@ -111,7 +111,9 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 #include "1.2.plot_real.typ"
 
-== Text Questions:
+=== Text Questions:
+
+$I_C$ betweeen pins 1 and 2 of _JP8_:  8.72 mA
 
 === Conclusion
 
