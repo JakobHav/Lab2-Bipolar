@@ -108,7 +108,7 @@ In this section, we measured the values we simulated earlier. Fi To calculate $I
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT characteristics_ circuit])[
-  #image("assets/2.2.2.circuit.jpg", width: 65%)
+  #image("assets/2.2.2.circuit.jpg", width: 60%)
 ]
 
 === Plots:

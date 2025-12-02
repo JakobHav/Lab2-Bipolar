@@ -13,8 +13,8 @@
     xlabel: [*$V_(B E)$* [V]],
     ylabel: [*$I_B$* [$mu$A]],
     legend: (position: left + top),
-    // xlim: (-5, 1),
-    ylim: (-0, 32),
+    xlim: (-0.01, 0.8),
+    ylim: (-0.01, 37),
 
     cycle: (
       it => {
@@ -91,21 +91,27 @@
   )
 ]
 
-#let (_, ic0, vce0) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic1, vce1) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic2, vce2) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic3, vce3) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic4, vce4) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+#let ibs = ()
+#for (vii, ibb) in vi.zip(ib) {
+  if (calc.rem-euclid(vii, 0.5) == 0) {
+    ibs.push(ibb)
+  }
+}
+
+#let (_, ic0, vce0) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic1, vce1) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0.5V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic2, vce2) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_1V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic3, vce3) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_1.5V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic4, vce4) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_2V.txt"), delimiter: "\t", skip-rows: 24)
 
 #show: lq.theme.skyline
 
-#let ic0 = ic0.map(v => v / 200)
-#let ic1 = ic1.map(v => v / 200)
-#let ic2 = ic2.map(v => v / 200)
-#let ic3 = ic3.map(v => v / 200)
-#let ic4 = ic4.map(v => v / 200)
-
-#figure(caption: [Simulated current through $R_C$ plotted over collector-emitter voltage])[
+#let ic0 = ic0.map(v => 1000 * v / 200)
+#let ic1 = ic1.map(v => 1000 * v / 200)
+#let ic2 = ic2.map(v => 1000 * v / 200)
+#let ic3 = ic3.map(v => 1000 * v / 200)
+#let ic4 = ic4.map(v => 1000 * v / 200)
+#figure(caption: [Measured current through $R_C$ plotted over collector-emitter voltage])[
   #lq.diagram(
     width: 80%,
     height: 23%,
@@ -122,11 +128,7 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: orange.darken(0%), dash: "solid", thickness: 1.2pt))
-        it
-      },
-      it => {
-        set lq.style(stroke: (paint: red.darken(0%), dash: "solid", thickness: 1.2pt))
+        set lq.style(stroke: (paint: red.darken(0%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
@@ -134,26 +136,26 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1.2pt))
+        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: blue.darken(0%), dash: "solid", thickness: 1.2pt))
+        set lq.style(stroke: (paint: blue.darken(-0%), dash: "solid", thickness: 3.0pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: purple.darken(0%).transparentize(20%), dash: "solid", thickness: 1.3pt))
+        set lq.style(stroke: (paint: rgb("#FF13F0").darken(-10%), dash: "solid", thickness: 0.9pt))
         it
       },
     ),
 
 
-    lq.plot(v0, i0, mark: ".", label: [#h(-20pt)$I_B [mu"A"]$], mark-size: 0pt),
+    lq.plot(vce0, ic0, mark: ".", label: [#h(-20pt)$I_B [mu"A"]$], mark-size: 0pt),
     // lq.plot(v5, i5, mark: ".", label: [42.9], mark-size: 0pt),
-    lq.plot(v4, i4, mark: ".", label: [33.0], mark-size: 0pt),
-    lq.plot(v3, i3, mark: ".", label: [23.1], mark-size: 0pt),
-    lq.plot(v2, i2, mark: ".", label: [13.2], mark-size: 0pt),
-    lq.plot(v1, i1, mark: ".", label: [3.6], mark-size: 0pt),
-    lq.plot(v0, i0, mark: ".", label: [0.0], mark-size: 0pt),
+    lq.plot(vce4, ic4, mark: ".", label: [10.59], mark-size: 0pt),
+    lq.plot(vce3, ic3, mark: ".", label: [6.71], mark-size: 0pt),
+    lq.plot(vce2, ic2, mark: ".", label: [2.81], mark-size: 0pt),
+    lq.plot(vce1, ic1, mark: ".", label: [0.24], mark-size: 0pt),
+    lq.plot(vce0, ic0, mark: ".", label: [0.0], mark-size: 0pt),
   )
 ]

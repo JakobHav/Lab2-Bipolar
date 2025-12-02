@@ -22,7 +22,7 @@
     xlabel: [*$V_(B E)$* [V]],
     ylabel: [*$I_B$* [$mu$A]],
     legend: (position: left + top),
-    xlim: (0, 0.9),
+    xlim: (-0.01, 0.8),
     ylim: (-0, 110),
 
     cycle: (
