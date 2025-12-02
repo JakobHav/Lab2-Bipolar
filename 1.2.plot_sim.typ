@@ -131,23 +131,23 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: orange.darken(0%), dash: "solid", thickness: 1pt))
+        set lq.style(stroke: (paint: orange.darken(0%), dash: "solid", thickness: 1.2pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: red.darken(0%), dash: "solid", thickness: 1pt))
+        set lq.style(stroke: (paint: red.darken(0%), dash: "solid", thickness: 1.2pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: yellow.darken(0%), dash: "solid", thickness: 1pt))
+        set lq.style(stroke: (paint: yellow.darken(5%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1pt))
+        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1.2pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: blue.darken(0%), dash: "solid", thickness: 1pt))
+        set lq.style(stroke: (paint: blue.darken(0%), dash: "solid", thickness: 1.2pt))
         it
       },
       it => {
