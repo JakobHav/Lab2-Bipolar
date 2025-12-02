@@ -91,20 +91,19 @@
   )
 ]
 
-#let (_, ic0, vce0) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic1, vce1) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic2, vce2) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic3, vce3) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
-#let (_, ic4, vce4) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 1)
+#let (_, ic0, vce0) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic1, vce1) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_0.5V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic2, vce2) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_1V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic3, vce3) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_1.5V.txt"), delimiter: "\t", skip-rows: 24)
+#let (_, ic4, vce4) = lq.load-txt(read("assets/2.2.2.u.bipolar_C1.diff_2V.txt"), delimiter: "\t", skip-rows: 24)
 
 #show: lq.theme.skyline
 
-#let ic0 = ic0.map(v => v / 200)
-#let ic1 = ic1.map(v => v / 200)
-#let ic2 = ic2.map(v => v / 200)
-#let ic3 = ic3.map(v => v / 200)
-#let ic4 = ic4.map(v => v / 200)
-
+#let ic0 = ic0.map(v => 1000 * v / 200)
+#let ic1 = ic1.map(v => 1000 * v / 200)
+#let ic2 = ic2.map(v => 1000 * v / 200)
+#let ic3 = ic3.map(v => 1000 * v / 200)
+#let ic4 = ic4.map(v => 1000 * v / 200)
 #figure(caption: [Simulated current through $R_C$ plotted over collector-emitter voltage])[
   #lq.diagram(
     width: 80%,
@@ -148,12 +147,12 @@
     ),
 
 
-    lq.plot(v0, i0, mark: ".", label: [#h(-20pt)$I_B [mu"A"]$], mark-size: 0pt),
+    lq.plot(vce0, ic0, mark: ".", label: [#h(-20pt)$I_B [mu"A"]$], mark-size: 0pt),
     // lq.plot(v5, i5, mark: ".", label: [42.9], mark-size: 0pt),
-    lq.plot(v4, i4, mark: ".", label: [33.0], mark-size: 0pt),
-    lq.plot(v3, i3, mark: ".", label: [23.1], mark-size: 0pt),
-    lq.plot(v2, i2, mark: ".", label: [13.2], mark-size: 0pt),
-    lq.plot(v1, i1, mark: ".", label: [3.6], mark-size: 0pt),
-    lq.plot(v0, i0, mark: ".", label: [0.0], mark-size: 0pt),
+    lq.plot(vce4, ic4, mark: ".", label: [33.0], mark-size: 0pt),
+    lq.plot(vce3, ic3, mark: ".", label: [23.1], mark-size: 0pt),
+    lq.plot(vce2, ic2, mark: ".", label: [13.2], mark-size: 0pt),
+    lq.plot(vce1, ic1, mark: ".", label: [3.6], mark-size: 0pt),
+    lq.plot(vce0, ic0, mark: ".", label: [0.0], mark-size: 0pt),
   )
 ]
