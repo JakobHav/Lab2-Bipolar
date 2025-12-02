@@ -33,6 +33,8 @@ Milan Fark
   size: 11pt,
 )
 
+#set figure(numbering: "1")
+
 = 2.2 Bipolar Characteristics
 
 == 2.2.1 Simulation
@@ -101,6 +103,8 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 
 === Introduction
 
+In this section, we measured the values we simulated earlier. Fi To calculate $I_B$
+
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT characteristics_ circuit])[
@@ -114,6 +118,32 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 === Text Questions:
 
 $I_C$ betweeen pins 1 and 2 of _JP8_:  8.72 mA
+
+
+IC values
+0.00
+0.00
+0.01
+0.01
+0.01
+0.04
+0.27
+0.67
+1.15
+1.65
+2.17
+2.68
+3.20
+3.73
+4.26
+4.78
+5.30
+5.82
+6.34
+6.85
+
+
+
 
 === Conclusion
 
