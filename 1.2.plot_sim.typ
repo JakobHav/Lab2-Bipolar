@@ -14,13 +14,13 @@
 // beta = ic/ib
 #show: lq.theme.skyline
 
-#figure(caption: "Simulated input characteristics")[
+#figure(caption: [Simulated base current over base-emitter voltage])[
   #lq.diagram(
     width: 80%,
-    height: 23%,
+    height: 22%,
     // title: [],
     xlabel: [*$V_(B E)$* [V]],
-    ylabel: [*$I_B$* [#sym.mu A]],
+    ylabel: [*$I_B$* [$mu$A]],
     legend: (position: left + top),
     xlim: (0, 0.9),
     ylim: (-0, 110),
@@ -57,7 +57,7 @@
 #figure(caption: [Simulated $beta "and" I_C "over" I_B$])[
   #lq.diagram(
     width: 80%,
-    height: 25%,
+    height: 22%,
     // title: [],
     xlabel: [*$I_B$* [$mu$A]],
     ylabel: [*$beta$* ],
@@ -114,7 +114,7 @@
 #let i4 = i4.map(v => v * 1000)
 #let i5 = i5.map(v => v * 1000)
 
-#figure(caption: "Simulated input characteristics")[
+#figure(caption: [Simulated current through $R_C$ plotted over collector-emitter voltage])[
   #lq.diagram(
     width: 80%,
     height: 23%,
