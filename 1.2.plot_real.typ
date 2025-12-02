@@ -1,46 +1,29 @@
 #import "@preview/lilaq:0.5.0" as lq
-// #let (_, vi_z, vd_z) = lq.load-txt(read("assets/ZD3V9_real_neu.txt"), delimiter: "\t", skip-rows: 20)
-// #let (_, vi_st, vd_st) = lq.load-txt(read("assets/BAT41_real_neu.txt"), delimiter: "\t", skip-rows: 20)
-// #let (_, vi_si, vd_si) = lq.load-txt(read("assets/1N4148_real_neu.txt"), delimiter: "\t", skip-rows: 20)
+#let (t, vbe, diff) = lq.load-txt(read("assets/2.2.2.bipolar_real_C1_Vbe.txt"), delimiter: "\t", skip-rows: 24)
+
+#let diff = diff.map(x => 1000000 * x / 120000)
 
 #show: lq.theme.skyline
 
-#figure(caption: [])[
+#figure(caption: [Measured base current over base-emitter voltage])[
   #lq.diagram(
-    width: 80%,
-    height: 27%,
+    width: 70%,
+    height: 22%,
     // title: [],
-    xlabel: [* * []],
-    ylabel: [* * []],
+    xlabel: [*$V_(B E)$* [V]],
+    ylabel: [*$I_B$* [$mu$A]],
     legend: (position: left + top),
-    xlim: (-5, 1),
-    // ylim: (-0, 4),
+    // xlim: (-5, 1),
+    ylim: (-0, 32),
 
     cycle: (
       it => {
-        set lq.style(fill: red.darken(20%).transparentize(20%))
-        it
-      },
-      it => {
-        set lq.style(fill: blue.darken(20%), stroke: (thickness: 1pt, dash: "dashed"))
-        it
-      },
-      it => {
-        set lq.style(fill: green.darken(20%), stroke: (thickness: 1pt, dash: "dotted"))
+        set lq.style(stroke: (paint: blue.darken(-20%).transparentize(20%), thickness: 1.5pt, dash: "solid"))
         it
       },
     ),
 
 
-    // lq.plot(vd_st, i_st, mark: ".", label: [BAT41 #h(1pt) (Schottky Diode)], mark-size: 0pt),
-    // lq.plot(
-    //   vd_si,
-    //   i_si,
-    //   stroke: (paint: blue.darken(20%), thickness: .7pt, dash: "dashed"),
-    //   mark: ".",
-    //   label: [1N4148 (Si Diode)],
-    //   mark-size: 0pt,
-    // ),
-    // lq.plot(vd_z, i_z, mark: ".", label: [ZD3V9 (Zener Diode)], mark-size: 0pt),
+    lq.plot(vbe, diff, mark: ".", mark-size: 0pt),
   )
-] <figure4>
+]

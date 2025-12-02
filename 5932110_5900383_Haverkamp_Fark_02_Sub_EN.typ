@@ -44,7 +44,7 @@ The goal was to simulate the behaviour of a BC547B bipolar. Figure 1 shows the c
 
 #figure(caption: [LTSpice circuit diagram with \
   instructions for both the first (bottom) and second (top) task])[
-  #image("assets/2.2.1.circuit.jpg", width: 50%)
+  #image("assets/2.2.1.circuit.jpg", width: 42%)
 ]
 
 === Plots:
@@ -104,7 +104,7 @@ We successfully simulated the BC547B bipolar characteristics under different vol
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT characteristics_ circuit])[
-  #image("assets/2.2.2.circuit.jpg", width: 70%)
+  #image("assets/2.2.2.circuit.jpg", width: 65%)
 ]
 
 === Plots:

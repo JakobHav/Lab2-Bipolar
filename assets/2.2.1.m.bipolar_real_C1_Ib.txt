@@ -18,7 +18,7 @@
 #Period: 200 ms
 #Amplitude: 1.1 V
 #Offset: 1.1 V
-#Phase: 0 °
+#Phase: 0
 
 Time (s)	Channel 1 (V)	Channel 2 (V)
 -0.256	1.087759221076178	3.085584766034879
