@@ -242,6 +242,30 @@ The goal was to simulate and characterize a bipolar-based current source.
 
 === Text Questions:
 
+(d)
+
+2.5V -> 16.29 mA \
+5V -> 39.19 mA
+
+(e)
+
+The red led is shining bright w 32.16 mA.
+
+The yellow led is also bright w 32.26 mA.
+
+The green led is a little less bright w 32.27 mA.
+
+The blue led is unpleasently bright but not enough to cause permanent eye-damage at 32.17 mA
+
+---
+
+The red led is shining bright w 36.75 mA.
+
+The yellow led is also bright w 36.77 mA.
+
+The green led is quite dim w 36.69 mA.
+
+The blue led is again unpleasently bright at 36.67 mA
 
 === Conclusion
 

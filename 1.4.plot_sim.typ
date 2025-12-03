@@ -52,7 +52,7 @@
     xlabel: [*$R_(L)$* [$Omega$]],
     ylabel: [*$I_(C)$* [mA]],
     legend: (position: right + top),
-    xlim: (100, 1400),
+    xlim: (1e-6 / 2, 1e6 * 2),
     // ylim: (-0, 110),
     xscale: "log",
 
