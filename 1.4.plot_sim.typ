@@ -37,7 +37,7 @@
     xlabel: [*$R_(L)$* [$Omega$]],
     ylabel: [*$I_(C)$* [mA]],
     legend: (position: right + top),
-    xlim: (1e-6 / 2, 10e5),
+    xlim: (1e-6 / 2, 10e5 * 2),
     // ylim: (-0, 110),
     xscale: "log",
 
