@@ -26,18 +26,33 @@
 #let i3 = i3.map(i => i * 1000)
 #let i4 = i4.map(i => i * 1000)
 
+#let rr = r4
+#let ii = i4
+
+#let i_max = 0.95 * calc.max(..ii) // min allowed value
+
+#let r_list = ()
+#for (r, i) in rr.zip(ii) {
+  if (i >= i_max) {
+    r_list.push(r)
+  }
+}
+
+
+#let MAX_R = calc.max(..r_list)
+
 
 #show: lq.theme.skyline
 
 #figure(caption: [Current through $R_L$ with different values for $R_L$])[
   #lq.diagram(
-    width: 80%,
-    height: 23%,
+    width: 81%,
+    height: 21%,
     // title: [],
     xlabel: [*$R_(L)$* [$Omega$]],
     ylabel: [*$I_(C)$* [mA]],
     legend: (position: right + top),
-    xlim: (1e-6 / 2, 10e5 * 2),
+    xlim: (100, 1400),
     // ylim: (-0, 110),
     xscale: "log",
 
@@ -51,19 +66,19 @@
         it
       },
       it => {
-        set lq.style(stroke: (paint: blue.darken(-30%), dash: "densely-dashed", thickness: 1.5pt))
+        set lq.style(stroke: (paint: blue.darken(-30%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: green.darken(0%), dash: "dashed", thickness: 1.5pt))
+        set lq.style(stroke: (paint: green.darken(0%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: yellow.darken(10%), dash: "dotted", thickness: 1.5pt))
+        set lq.style(stroke: (paint: yellow.darken(-0%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
-        set lq.style(stroke: (paint: blue.darken(0%), dash: "densely-dashed", thickness: 1.5pt))
+        set lq.style(stroke: (paint: blue.darken(0%), dash: "solid", thickness: 1.5pt))
         it
       },
       it => {
@@ -81,10 +96,9 @@
         $V_i [V] | R_E [Omega]$],
       mark-size: 0pt,
     ),
-    lq.plot(r2, i2, mark: ".", label: [2.5 | 200], mark-size: 0pt),
+    lq.plot(r3, i3, mark: ".", label: [5 #h(8.5pt)  | 100], mark-size: 0pt),
+    lq.plot(r4, i4, mark: ".", label: [5 #h(8.5pt) | 200], mark-size: 0pt),
     lq.plot(r1, i1, mark: ".", label: [2.5 | 100], mark-size: 0pt),
-
-    lq.plot(r4, i4, mark: ".", label: [5 #h(7.5pt) | 200], mark-size: 0pt),
-    lq.plot(r3, i3, mark: ".", label: [5 #h(7.5pt) | 100], mark-size: 0pt),
+    lq.plot(r2, i2, mark: ".", label: [2.5 | 200], mark-size: 0pt),
   )
 ]

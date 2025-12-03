@@ -157,11 +157,17 @@ $I_C$ betweeen pins 1 and 2 of _JP8_:  8.72 mA
 #figure(caption: [Schematic of the _BJT Amplifier_ circuit])[
   #image("assets/2.3.2.circuit.jpg", width: 70%)
 ]
-=== Plots:
+// === Plots:
 
-#include "1.3.plot_real.typ"
+// #include "1.3.plot_real.typ"
 
 === Text Questions:
+
+To calculate the amplification gain, we calulated: $20 dot log_10(V_"in" / V_"out") approx$ 40.51 dbV
+
+(i)
+Amplification of 41.69 dbV
+
 
 === Conclusion
 
@@ -180,7 +186,7 @@ The goal was to simulate and characterize a bipolar-based current source.
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice circuit diagram with $R_E = 200 Omega$ and $V_i$ = 2.5V])[
-  #image("assets/2.4.1.circuit.jpg", width: 40%)
+  #image("assets/2.4.1.circuit.jpg", width: 35%)
 ]
 === Plots:
 #include "1.4.plot_sim.typ"
@@ -198,6 +204,20 @@ The goal was to simulate and characterize a bipolar-based current source.
   [2.5], [100], [17.72],
   [5], [200], [21.27],
   [5], [100], [42.21],
+)
+
+
+(h)
+#table(
+  columns: 3,
+  inset: 5pt,
+  stroke: 0.5pt,
+  align: horizon,
+  table.header([*$V_i$* [V]], [*$R_E$* [$Omega$]], [*$I_(C(max))$* [mA]]),
+  [2.5], [200], [794.33],
+  [2.5], [100], [398.11],
+  [5], [200], [251.19],
+  [5], [100], [125.89],
 )
 
 === Conclusion:
