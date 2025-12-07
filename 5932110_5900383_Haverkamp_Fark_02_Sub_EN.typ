@@ -282,7 +282,7 @@ The goal was to simulate and characterize a bipolar-based current source.
 
 === Introduction
 
-Section 2.4.2. is about a bipolar current source, which we used to power light-emitting diodes.
+Section 2.4.2. is about a bipolar based current source, which we used to power light-emitting diodes.
 
 === Circuit Diagrams:
 
@@ -313,3 +313,6 @@ The green LED is quite dim with $I_C =$ 36.69 mA and the blue LED is again unple
 
 === Conclusion
 
+We sucessfully measured the characteristics of the current source circuit.
+
+Using the bipolar as a current source caused the blue LED to be very bright, the green LED being the most dim and the red and yellow LEDs to shine bright. Adding the Zener diode led to the collector current to be slightly higher, from around 32 mA to 36 mA.
