@@ -71,9 +71,9 @@ As seen in @beta, $beta$ is not constant, instead slowly going from $beta approx
   inset: 0pt,
   gutter: 4%,
   [
-    As seen in @tab1, the early voltages for different values of $I_B$ are all very similar, around 61 V. One trend we can observe is that for higher $I_B$ values, the early voltages slightly decreases.
+    As seen in @tab1, the early voltages for different values of $I_B$ are all very similar, around 61 V. One observable trend  is that for higher $I_B$ values, the early voltages slightly decreases.
 
-    We can also see that for $I_B = 0.0$, our value does not make a lot of sense, and is very difficult to calculate better, as $I_C$ is close to 0V for the entire time.
+    It is also visible that for $I_B = 0.0$, the value does not make a lot of sense, and is difficult to calculate better, as $I_C$ is close to 0V.
 
   ],
 
@@ -103,19 +103,19 @@ As seen in @beta, $beta$ is not constant, instead slowly going from $beta approx
 #v(-20pt)
 === Conclusion:
 
-We successfully simulated the BC547B bipolar characteristics. In the input characteristics we could see it producing a diode curve. We could see the bipolar amplifing the base current by a factor of $beta approx 260-325$, going down for bigger $I_B$ values. We also noticed the $I_C$ over $V_(C E)$ curve getting steeper with bigger $I_B$ values and measured an early voltage of $V_E approx 61 V$.
+We successfully simulated the BC547B bipolar characteristics. In the input characteristics we could see it producing a diode curve. We could see the bipolar amplifying the base current by a factor of $beta approx 260-325$, going down for bigger $I_B$ values. We also noticed the $I_C$ over $V_(C E)$ curve getting steeper with bigger $I_B$ values and measured an early voltage of $V_E approx 61 V$.
 
 == 2.2.2. Measurement
 
 === Introduction
 
-In this section, we measured the values we simulated earlier. To calculate $I_B$
+In this section, we measured the values we simulated earlier. To calculate $I_B$ we measured the voltage drop over the resistor $R_41$ and did the same with $I_C$ and $R_31$ (@fig5). We used that to calculate $beta$ as well as the early voltages at different $I_B$.
 
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT characteristics_ circuit])[
   #image("assets/2.2.2.circuit.jpg", width: 65%)
-]
+] <fig5>
 
 === Plots:
 
@@ -123,9 +123,9 @@ In this section, we measured the values we simulated earlier. To calculate $I_B$
 
 === Text Questions:
 
-In @fig7 we connected a hand-multimeter between pins 1 and 2 of _JP8_ to measure $I_C$ as a function of $I_B$. Due to so little measured values (n=20), the curve is a little wobbly.
+In @fig7 we connected a hand-multimeter between pins 1 and 2 of _JP8_ to measure $I_C$ as a function of $I_B$. Due to the limited amount of measurements (n=20), the curve is a little wobbly.
 
-Also, we can *not* see $beta$ getting lower over time (and therefore could not see $I_C$ getting less steep), which is different to the simulation.
+$beta$ is, in difference to the simulation, not getting lower over time (and therefore $I_C$ is not getting less steep).
 
 #let leftt = 68%
 #table(
@@ -134,7 +134,7 @@ Also, we can *not* see $beta$ getting lower over time (and therefore could not s
   inset: 0pt,
   gutter: 4%,
   [
-    Our measured early voltages in @tab2 are quite similar to each other, around 105-110 V.
+    The early voltages calculated form measurements in @tab2 are quite similar to each other, around 105-110 V.
 
     Similar to the simulation, the measured early voltages for $I_B approx 0.0$ $mu$A and $I_B approx 0.24$ $mu$A are not realistic, because $I_C$ is so close to 0 mA.
 
