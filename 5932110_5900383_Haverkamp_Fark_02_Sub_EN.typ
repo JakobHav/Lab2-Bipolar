@@ -184,7 +184,7 @@ In this section we used a common emitter amplifier to amplify a small AC signal 
 
 #figure(caption: [LTSpice circuit diagram for the common emitter amplifier])[
   #image("assets/2.3.1.circuit.jpg", width: 62%)
-  
+
 ]<fig9>
 
 === Plots:
@@ -192,7 +192,7 @@ In this section we used a common emitter amplifier to amplify a small AC signal 
 #include "1.3.plot_sim.typ"
 
 === Text Questions:
-The 
+The
 === Conclusion:
 
 = 2.3.2. Measurement

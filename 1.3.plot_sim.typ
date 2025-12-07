@@ -16,7 +16,7 @@
   caption: [Simulated phase and amplification of the common emitter amplifier for a frequency of  1kHz-100MHz on a $"log"_2$ scale. $R_48= 220 space Omega space$ and $space R_51 = 680 space Omega$ ],
 )[
   #lq.diagram(
-    width: 80%,
+    width: 90%,
     height: 24%,
     // title: [],
     xlabel: [*Frequency* [MHz]],
@@ -31,7 +31,7 @@
       // subticks: 10,
       ticks: (
         (.001, ".001"),
-        (.0025, ".0025"),
+        (.002, ".002"),
         (.005, ".005"),
         (.01, ".01"),
         (.025, ".025"),

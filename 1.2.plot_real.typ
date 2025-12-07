@@ -7,7 +7,7 @@
 
 #figure(caption: [Measured base current over base-emitter voltage])[
   #lq.diagram(
-    width: 70%,
+    width: 80%,
     height: 22%,
     // title: [],
     xlabel: [*$V_(B E)$* [V]],
@@ -40,11 +40,6 @@
 #let ib = ib.map(x => 1000 * x)
 
 #show: lq.theme.skyline
-#show: lq.set-grid(
-  stroke: black.transparentize(90%) + 0.55pt,
-  stroke-sub: black.transparentize(80%) + 0.1pt,
-  sub: true,
-)
 #figure(caption: [Measured $beta "and" I_C "over" I_B$])[
   #lq.diagram(
     width: 80%,

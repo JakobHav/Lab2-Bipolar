@@ -51,14 +51,9 @@
 
 
 #show: lq.theme.skyline
-#show: lq.set-grid(
-  stroke: black.transparentize(90%) + 0.55pt,
-  stroke-sub: black.transparentize(80%) + 0.1pt,
-  sub: true,
-)
 #figure(caption: [Simulated $beta "and" I_C "over" I_B$])[
   #lq.diagram(
-    width: 80%,
+    width: 85%,
     height: 21%,
     // title: [],
     xlabel: [*$I_B$* [$mu$A]],
