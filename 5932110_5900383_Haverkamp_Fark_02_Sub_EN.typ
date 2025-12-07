@@ -279,6 +279,10 @@ The goal was to simulate and characterize a bipolar-based current source.
 
 = 2.4.2. Measurement
 
+=== Introduction
+
+Section 2.4.2. is about a bipolar current source, which we used to power light-emitting diodes.
+
 === Circuit Diagrams:
 
 
@@ -292,35 +296,19 @@ The goal was to simulate and characterize a bipolar-based current source.
   #image("assets/2.4.2.circuit3.jpg", width: 60%)
 ]
 
-=== Plots:
-#include "1.4.plot_real.typ"
-
 === Text Questions:
 
-(d)
+The collector current is $I_C =$ 16.29 mA for $V_i = 2.5$ V and $I_C = 39.19$ mA for $V_i = 5$V
 
-2.5V -> 16.29 mA \
-5V -> 39.19 mA
+When connected one at a time, the red LED shines brightly with current $I_C =$ 32.16 mA. The yellow LED is also bright with $I_C =$ 32.26 mA.
 
-(e)
-
-The red led is shining bright w 32.16 mA.
-
-The yellow led is also bright w 32.26 mA.
-
-The green led is a little less bright w 32.27 mA.
-
-The blue led is unpleasently bright but not enough to cause permanent eye-damage at 32.17 mA
+The green LED is a little less bright with $I_C =$ 32.27 mA and blue LED is unpleasently bright, but not enough to cause permanent eye-damage, with $I_C =$ 32.17 mA.
 
 ---
 
-The red led is shining bright w 36.75 mA.
+With the Zener diode, the red LED is, again, shining bright with $I_C =$ 36.75 mA, just like the yellow LED, which is also bright and has a current of $I_C =$ 36.77 mA.
 
-The yellow led is also bright w 36.77 mA.
-
-The green led is quite dim w 36.69 mA.
-
-The blue led is again unpleasently bright at 36.67 mA
+The green LED is quite dim with $I_C =$ 36.69 mA and the blue LED is again unpleasently bright with $I_C =$ 36.67 mA.
 
 === Conclusion
 
