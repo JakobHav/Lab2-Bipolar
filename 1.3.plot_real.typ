@@ -2,6 +2,7 @@
 #let (t, vi, vo) = lq.load-txt(read("assets/2.3.2.CEA_C1.out.txt"), delimiter: "\t", skip-rows: 24)
 
 #let (freq, ch1, ch2, phase) = lq.load-txt(read("assets/2.3.2.network.48.txt"), delimiter: "\t", skip-rows: 30)
+#let (freq2, ch1_2, ch2_2, phase2) = lq.load-txt(read("assets/2.3.2.network.51.txt"), delimiter: "\t", skip-rows: 21)
 
 #let max_vi = 0
 #let max_vo = 0
@@ -25,7 +26,13 @@
   amp.push(out - inn)
 }
 
+#let amp2 = ()
+#for (out, inn) in ch1_2.zip(ch2_2) {
+  amp2.push(out - inn)
+}
+
 #let freq = freq.map(x => x * 1e-3)
+#let freq2 = freq2.map(x => x * 1e-3)
 
 #show: lq.theme.skyline
 
@@ -34,11 +41,11 @@
 )[
   #lq.diagram(
     width: 100%,
-    height: 27%,
+    height: 38%,
     // title: [],
     xlabel: [*Frequency* [kHz]],
     ylabel: [*Amplification* [dB]],
-    legend: (position: left + horizon, dy: 10pt, stroke: none),
+    legend: (position: center + top, dx: -37pt, dy: -12pt, stroke: none),
     xlim: (0.5 / 1000, 100 * 1.4),
     // xscale: "log",
     xscale: lq.scale.log(base: 2),
@@ -60,7 +67,7 @@
         (2.1, "2.1"),
         (5, "5"),
         (10, "10"),
-        (21.5, "21.5"),
+        (21, "21"),
         (50, "50"),
         (100, "100"),
       ),
@@ -74,28 +81,30 @@
       position: right,
       label: [*Phase* [deg]],
       lq.plot(freq, phase, mark: ".", label: [Phase $R_48$], mark-size: 0pt),
+      lq.plot(freq2, phase2, mark: ".", label: [Phase $R_51$], mark-size: 0pt),
     ),
 
     cycle: (
       it => {
-        set lq.style(fill: blue.darken(-30%).transparentize(20%))
+        set lq.style(fill: blue.darken(10%), stroke: (thickness: 1pt))
         it
       },
       it => {
-        set lq.style(fill: blue.darken(30%), stroke: (thickness: 1pt, dash: "dashed"))
+        set lq.style(fill: blue.darken(-20%), stroke: (thickness: 1pt, dash: "dashed"))
         it
       },
       it => {
-        set lq.style(fill: red.darken(-30%).transparentize(20%))
+        set lq.style(fill: red.darken(10%), stroke: (thickness: 1pt))
         it
       },
       it => {
-        set lq.style(fill: red.darken(30%), stroke: (thickness: 1pt, dash: "dashed"))
+        set lq.style(fill: red.darken(-20%), stroke: (thickness: 1pt, dash: "dashed"))
         it
       },
     ),
 
 
     lq.plot(freq, amp, mark: ".", label: [Amp. $R_48$], mark-size: 0pt),
+    lq.plot(freq2, amp2, mark: ".", label: [Amp. $R_51$], mark-size: 0pt),
   )
 ]
