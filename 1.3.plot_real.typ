@@ -41,7 +41,7 @@
 #show: lq.theme.skyline
 
 #figure(
-  caption: [Phase and amplification of the commom emitter amplifier for  1Hz-100kHz on a $"log"_2$ scale. $R_48= 220 space Omega space$ and $space R_51 = 680 space Omega$ ],
+  caption: [Phase and amplification of the common emitter amplifier for  1Hz-100kHz on a $"log"_2$ scale. $R_48= 220 space Omega space$ and $space R_51 = 680 space Omega$ ],
 )[
   #lq.diagram(
     width: 100%,

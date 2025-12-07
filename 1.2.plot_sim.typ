@@ -122,8 +122,8 @@
     // title: [],
     xlabel: [*$V_(C E)$* [V]],
     ylabel: [*$I_C$* [mA]],
-    legend: (position: left + top),
-    xlim: (-15, 10),
+    legend: (position: right + top, dx: 5pt, dy: -5pt),
+    // xlim: (-3, 10),
     ylim: (-0.1, 15),
 
     cycle: (
