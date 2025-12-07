@@ -43,7 +43,7 @@ Milan Fark
 
 === Introduction
 Our goal was to simulate the behaviour of a BC547B bipolar. @fig1 shows the circuit
-diagram in LTSpice, @fig2 shows the Voltage difference from Base to Emitter, when we slowly ramp up the input voltage, which is connected to the base end of the transistor.
+diagram in LTSpice, @fig2 shows the Voltage difference from Base to Emitter, when we slowly ramp up the input voltage $V_i$, which is connected to the base end of the transistor.
 In @beta, we determined $beta$ (the current gain), and plotted it and $I_C$ over $I_B$.
 To figure out the early voltages of the bipolar, we plotted $I_C$ over $V_(C E)$ and calculated, where $I_C$ is zero, see @fig4.
 
@@ -59,9 +59,9 @@ To figure out the early voltages of the bipolar, we plotted $I_C$ over $V_(C E)$
 
 === Text Questions:
 
-At currents $I_B lt.approx 0.15$ $mu$A, $beta$ does not approximate a single number, but instead jumps a lot, the max value being 1641.45 and the minimum -715.27, which happens due to really small numbers in the divisor ($I_B$). For slightly currents $I_B > 0.15$ $mu$A, the value for $beta approx 325$.
+At currents $I_B lt.approx 0.15$ $mu$A, $beta$ does not approximate a single number, but instead jumps a lot, the maximum value being 1641.45 and the minimum -715.27, which happens due to small numbers in the divisor ($I_B$). For slightly higher currents $I_B > 0.15$ $mu$A, the value for $beta approx 325$.
 
-As we can see in @beta, $beta$ is not constant, instead it slowly goes from $beta approx 325$ at the beginning to $beta approx 260$ at the end. We can not only see the effect in the graph of beta itself, but also in the fact that $I_C$ slowly flattens when plotted over $I_B$.
+As seen in @beta, $beta$ is not constant, instead slowly going from $beta approx 325$ at the beginning to $beta approx 260$ at the end. The effect is seen not only in the graph of beta itself, but also in the fact that $I_C$ flattens when plotted over $I_B$.
 
 #let leftt = 68%
 
@@ -71,9 +71,9 @@ As we can see in @beta, $beta$ is not constant, instead it slowly goes from $bet
   inset: 0pt,
   gutter: 4%,
   [
-    As we can see in @tab1, the early voltages for different values for $I_B$ are all very similar, around 61 V. One trend we can observe however is that for higher $I_B$ values, the early voltages slightly shrink.
+    As seen in @tab1, the early voltages for different values of $I_B$ are all very similar, around 61 V. One trend we can observe is that for higher $I_B$ values, the early voltages slightly decreases.
 
-    Also, we can see that for $I_B = 0.0$, our value does not make a lot of sense, and it is very difficult to calculate better, as $I_C$ is so close to 0V for the entire time.
+    We can also see that for $I_B = 0.0$, our value does not make a lot of sense, and is very difficult to calculate better, as $I_C$ is close to 0V for the entire time.
 
   ],
 
