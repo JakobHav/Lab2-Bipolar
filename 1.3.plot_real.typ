@@ -2,6 +2,7 @@
 #let (t, vi, vo) = lq.load-txt(read("assets/2.3.2.CEA_C1.out.txt"), delimiter: "\t", skip-rows: 24)
 
 #let (freq, ch1, ch2, phase) = lq.load-txt(read("assets/2.3.2.network.48.txt"), delimiter: "\t", skip-rows: 30)
+#let (freq, ch1, ch2, phase) = lq.load-txt(read("assets/2.3.2.network.48_neu.txt"), delimiter: "\t", skip-rows: 21)
 #let (freq2, ch1_2, ch2_2, phase2) = lq.load-txt(read("assets/2.3.2.network.51.txt"), delimiter: "\t", skip-rows: 21)
 
 #let max_vi = 0
@@ -41,7 +42,7 @@
 )[
   #lq.diagram(
     width: 100%,
-    height: 38%,
+    height: 26%,
     // title: [],
     xlabel: [*Frequency* [kHz]],
     ylabel: [*Amplification* [dB]],
@@ -77,12 +78,6 @@
       exponent: 0,
       subticks: 4,
     ),
-    lq.yaxis(
-      position: right,
-      label: [*Phase* [deg]],
-      lq.plot(freq, phase, mark: ".", label: [Phase $R_48$], mark-size: 0pt),
-      lq.plot(freq2, phase2, mark: ".", label: [Phase $R_51$], mark-size: 0pt),
-    ),
 
     cycle: (
       it => {
@@ -90,11 +85,11 @@
         it
       },
       it => {
-        set lq.style(fill: blue.darken(-20%), stroke: (thickness: 1pt, dash: "dashed"))
+        set lq.style(fill: red.darken(10%), stroke: (thickness: 1pt))
         it
       },
       it => {
-        set lq.style(fill: red.darken(10%), stroke: (thickness: 1pt))
+        set lq.style(fill: blue.darken(-20%), stroke: (thickness: 1pt, dash: "dashed"))
         it
       },
       it => {
@@ -105,6 +100,12 @@
 
 
     lq.plot(freq, amp, mark: ".", label: [Amp. $R_48$], mark-size: 0pt),
-    lq.plot(freq2, amp2, mark: ".", label: [Amp. $R_51$], mark-size: 0pt),
+    // lq.plot(freq2, amp2, mark: ".", label: [Amp. $R_51$], mark-size: 0pt),
+    lq.yaxis(
+      position: right,
+      label: [*Phase* [deg]],
+      lq.plot(freq, phase, mark: ".", label: [Phase $R_48$], mark-size: 0pt),
+      // lq.plot(freq2, phase2, mark: ".", label: [Phase $R_51$], mark-size: 0pt),
+    ),
   )
 ]
