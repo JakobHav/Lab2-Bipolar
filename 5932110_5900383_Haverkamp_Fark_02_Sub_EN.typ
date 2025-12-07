@@ -168,7 +168,7 @@ Also, we can *not* see $beta$ getting lower over time (and therefore could not s
 
 === Conclusion
 
-Most characteristics were similar to the simulation,
+Most characteristics were similar to the simulation, however we could not see beta getting lower over time. We measured the early voltage to be $V_E approx 105-110$. The input characteristics look very similar to the simulation, again producing a diode curve.
 
 
 
@@ -203,9 +203,9 @@ Most characteristics were similar to the simulation,
 #figure(caption: [Schematic of the _BJT Amplifier_ circuit])[
   #image("assets/2.3.2.circuit.jpg", width: 70%)
 ]
-// === Plots:
+=== Plots:
 
-// #include "1.3.plot_real.typ"
+#include "1.3.plot_real.typ"
 
 === Text Questions:
 
