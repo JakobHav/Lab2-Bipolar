@@ -192,11 +192,7 @@ In this section we used a common emitter amplifier to amplify a small AC signal 
 #include "1.3.plot_sim.typ"
 
 === Text Questions:
-<<<<<<< HEAD
 As seen in @fig10 the amplification of $R_48$ is higher than that of $R_51$, because of the higher resistance of $R_51$. The phase shift of $R_48$ is slightly more in the lowest frequencies, a little less at the highest frequencies but overall very similar to that of $R_51$. The four graphs all start of increasing linearly until 10 kHz where they start decreasing again.
-=======
-The
->>>>>>> 6120b3df826cdf36a0ca00763aa0b2039f898511
 === Conclusion:
 The common emitter amplifier has it's highest amplification and phase shift around 10 kHz. The amplification of $R_48$ is higher than that of $R_51$.
 = 2.3.2. Measurement
