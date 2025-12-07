@@ -179,7 +179,7 @@ Most characteristics were similar to the simulation, however we could not see be
 == 2.3.1 Simulation
 
 === Introduction
-In this section we used a common emitter amplifier to amplify a small AC signal and plot the amplification and phase shift of this signal. We simulated the circuit @fig9 using two different resistors $R_E$.
+In this section we used a common emitter amplifier to amplify a small AC signal and plot the amplification and phase shift of this signal. We simulated the circuit shown in @fig9 using two different resistors $R_E$, one being $R_48 = 220 space Omega "and the other" R_51 = 680 space Omega$.
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice circuit diagram for the common emitter amplifier])[
