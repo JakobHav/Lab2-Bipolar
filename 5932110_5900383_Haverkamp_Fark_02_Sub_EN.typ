@@ -230,7 +230,7 @@ All calculated values are very similar, also to the graph.
 
 === Conclusion
 
-The amplification of the common emitter amplifier with $R_48 approx 41$ dB and with $R_51 approx 35$ dB.
+We calculated the amplification of the common emitter amplifier with $R_48 approx 41$ dB and with $R_51 approx 35$ dB. This experiment also showed the difference of amplification and phase shift in regards to the frequency used.
 
 = 2.4. Current source
 
