@@ -17,7 +17,7 @@
 #figure(caption: [Simulated base current over base-emitter voltage])[
   #lq.diagram(
     width: 80%,
-    height: 22%,
+    height: 21%,
     // title: [],
     xlabel: [*$V_(B E)$* [V]],
     ylabel: [*$I_B$* [$mu$A]],
@@ -45,7 +45,9 @@
     // lq.plot(vd_si, i_si, mark: ".", label: [1N4148 (Si Diode)], mark-size: 0pt),
     // lq.plot(vd_z, i_z, mark: ".", label: [ZD3V9 (Zener Diode)], mark-size: 0pt),
   )
-]
+] <fig2>
+
+#let b = ib.slice(60, 200)
 
 
 #show: lq.theme.skyline
@@ -57,7 +59,7 @@
 #figure(caption: [Simulated $beta "and" I_C "over" I_B$])[
   #lq.diagram(
     width: 80%,
-    height: 22%,
+    height: 21%,
     // title: [],
     xlabel: [*$I_B$* [$mu$A]],
     ylabel: [*$beta$* ],
@@ -106,13 +108,15 @@
 )
 
 #show: lq.theme.skyline
-
 #let i0 = i0.map(v => v * 1000)
 #let i1 = i1.map(v => v * 1000)
 #let i2 = i2.map(v => v * 1000)
 #let i3 = i3.map(v => v * 1000)
 #let i4 = i4.map(v => v * 1000)
 #let i5 = i5.map(v => v * 1000)
+
+#let x0 = range(-40, 8)
+#let y0 = x0.map(x => 1000 * (8.19978e-4 * x + 0.00917))
 
 #figure(caption: [Simulated current through $R_C$ plotted over collector-emitter voltage])[
   #lq.diagram(
@@ -121,9 +125,9 @@
     // title: [],
     xlabel: [*$V_(C E)$* [V]],
     ylabel: [*$I_C$* [mA]],
-    legend: (position: right + top),
-    // xlim: (-0.2, 7),
-    // ylim: (-0, 110),
+    legend: (position: left + top),
+    xlim: (-15, 10),
+    ylim: (-0.1, 15),
 
     cycle: (
       it => {
@@ -154,6 +158,10 @@
         set lq.style(stroke: (paint: purple.darken(0%).transparentize(20%), dash: "solid", thickness: 1.3pt))
         it
       },
+      it => {
+        set lq.style(stroke: (paint: blue.darken(-50%).transparentize(50%), dash: "dashed", thickness: 1.3pt))
+        it
+      },
     ),
 
 
@@ -164,5 +172,6 @@
     lq.plot(v2, i2, mark: ".", label: [13.2], mark-size: 0pt),
     lq.plot(v1, i1, mark: ".", label: [3.6], mark-size: 0pt),
     lq.plot(v0, i0, mark: ".", label: [0.0], mark-size: 0pt),
+    lq.plot(x0, y0, mark: ".", label: [0.0], mark-size: 0pt),
   )
-]
+] <fig4>

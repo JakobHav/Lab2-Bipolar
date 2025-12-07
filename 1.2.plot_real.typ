@@ -26,7 +26,7 @@
 
     lq.plot(vbe, diff, mark: ".", mark-size: 0pt),
   )
-]
+] <fig6>
 
 #let (vi, ic, ib) = lq.load-txt(read("assets/2.2.2.m.bipolar.txt"), delimiter: ",", skip-rows: 1)
 
@@ -89,7 +89,7 @@
     // lq.plot(vd_si, i_si, mark: ".", label: [1N4148 (Si Diode)], mark-size: 0pt),
     // lq.plot(vd_z, i_z, mark: ".", label: [ZD3V9 (Zener Diode)], mark-size: 0pt),
   )
-]
+] <fig7>
 
 #let ibs = ()
 #for (vii, ibb) in vi.zip(ib) {
@@ -158,4 +158,4 @@
     lq.plot(vce1, ic1, mark: ".", label: [0.24], mark-size: 0pt),
     lq.plot(vce0, ic0, mark: ".", label: [0.0], mark-size: 0pt),
   )
-]
+] <fig8>
