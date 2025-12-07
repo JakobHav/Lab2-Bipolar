@@ -192,25 +192,25 @@ In this section we used a common emitter amplifier to amplify a small AC signal 
 #include "1.3.plot_sim.typ"
 
 === Text Questions:
-The 
+As seen in @fig10 the amplification of $R_48$ is higher than that of $R_51$, because of the higher resistance of $R_51$. The phase shift of $R_48$ is slightly more in the lowest frequencies, a little less at the highest frequencies but overall very similar to that of $R_51$. The four graphs all start of increasing linearly until 10 kHz where they start decreasing again.
 === Conclusion:
-
+The common emitter amplifier has it's highest amplification and phase shift around 10 kHz. The amplification of $R_48$ is higher than that of $R_51$.
 = 2.3.2. Measurement
 
 === Introduction
-
+In this section we measured the common emitter amplifier we simulated in 2.3.1. using the circuit shown in @fig11.
 === Circuit Diagrams:
 
 #figure(caption: [Schematic of the _BJT Amplifier_ circuit])[
   #image("assets/2.3.2.circuit.jpg", width: 70%)
-]
+] <fig11>
 === Plots:
 
 #include "1.3.plot_real.typ"
 
 === Text Questions:
 
-We calculated phase shift of $R_48$ to be $Phi(R_48) approx 168.02 degree$ \ #h(50pt)and phase shift of $R_51$ to be $Phi(R_51) approx 176.45 degree$.
+The phase shift of $R_48$ is $Phi(R_48) approx 168.02 degree$ and phase shift of $R_51$ is $Phi(R_51) approx 176.45 degree$.
 
 To calculate the amplification gain for the given system, we calculated the gain between the maximum input and output voltage (so the difference in amplitudes):
 
@@ -226,7 +226,7 @@ $ R_48": " 41.69 "dB" \ R_51": " 36.33 "dB" $
 
 With the small signal analysis, we calculated the gain and phase shift at 10kHz to be: $ R_48": " 41.15 "dB and" 168.48 degree \ R_51": " 35.53 "dB and" 176.11#sym.degree $
 
-All calculated values are very similar, also in the graph.
+All calculated values are very similar, also to the graph.
 
 === Conclusion
 
