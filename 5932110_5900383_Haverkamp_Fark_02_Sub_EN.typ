@@ -125,7 +125,7 @@ In this section, we measured the values we simulated earlier. To calculate $I_B$
 
 In @fig7 we connected a hand-multimeter between pins 1 and 2 of _JP8_ to measure $I_C$ as a function of $I_B$. Due to the limited amount of measurements (n=20), the curve is a little wobbly.
 
-$beta$ is, in difference to the simulation, not getting lower over time (and therefore $I_C$ is not getting less steep).
+$beta$ is, different to the simulation, not getting lower over time (and therefore $I_C$ is not getting less steep), instead staying around $beta approx 630$.
 
 #let leftt = 68%
 #table(
@@ -134,9 +134,9 @@ $beta$ is, in difference to the simulation, not getting lower over time (and the
   inset: 0pt,
   gutter: 4%,
   [
-    The early voltages calculated form measurements in @tab2 are quite similar to each other, around 105-110 V.
+    The relevant early voltages calculated form measurements in @tab2 are quite similar to each other, around 105-110 V.
 
-    Similar to the simulation, the measured early voltages for $I_B approx 0.0$ $mu$A and $I_B approx 0.24$ $mu$A are not realistic, because $I_C$ is so close to 0 mA.
+    Similar to the simulation, the measured early voltages for $I_B approx 0.0$ $mu$A and $I_B approx 0.24$ $mu$A are not realistic, because $I_C$ is close to 0 A.
 
   ],
 
