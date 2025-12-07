@@ -209,7 +209,7 @@ Most characteristics were similar to the simulation, however we could not see be
 
 === Text Questions:
 
-We calculated phase shift of $R_51$ to be $Phi(R_51) approx 172.75 degree$ and phase shift of $R_48$ to be $Phi(R_48) approx 181 degree$.
+We calculated phase shift of $R_48$ to be $Phi(R_48) approx 168.02 degree$ \ #h(50pt)and phase shift of $R_51$ to be $Phi(R_51) approx 176.45 degree$.
 
 To calculate the amplification gain for the given system, we calculated the gain between the maximum input and output voltage (so the difference in amplitudes):
 
@@ -223,16 +223,13 @@ $
 With the spectrum analysis, we got amplification values of:
 $ R_48": " 41.69 "dB" \ R_51": " 36.33 "dB" $
 
-With the small signal analysis, we calculated the gain and phase shift at 10kHz to be: $ R_48": " 41.15 "dB and" 111.07 degree \ R_51": " 35.53 "dB and" 176.11#sym.degree $
+With the small signal analysis, we calculated the gain and phase shift at 10kHz to be: $ R_48": " 41.15 "dB and" 168.48 degree \ R_51": " 35.53 "dB and" 176.11#sym.degree $
 
-All calculated values are very similar, and also show in the graph.
+All calculated values are very similar, also in the graph.
 
 === Conclusion
 
-
-
-
-
+The amplification of the common emitter amplifier with $R_48 approx 41$ dB and with $R_51 approx 35$ dB.
 
 = 2.4. Current source
 

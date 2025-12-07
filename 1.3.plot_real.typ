@@ -51,7 +51,6 @@
     ylabel: [*Amplification* [dB]],
     legend: (position: center + bottom, dx: -0pt, dy: -0pt, stroke: none),
     xlim: (0.5 / 1000, 100 * 1.4),
-    // xscale: "log",
     xscale: lq.scale.log(base: 2),
 
     xaxis: (
@@ -109,6 +108,7 @@
       label: [*Phase* [deg]],
       lq.plot(freq, phase, mark: ".", label: [Phase $R_48$], mark-size: 0pt),
       lq.plot(freq2, phase2, mark: ".", label: [Phase $R_51$], mark-size: 0pt),
+      lim: (-210, 210),
     ),
   )
 ]
