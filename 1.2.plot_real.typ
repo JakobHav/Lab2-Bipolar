@@ -39,7 +39,6 @@
 
 #let ib = ib.map(x => 1000 * x)
 
-
 #show: lq.theme.skyline
 #show: lq.set-grid(
   stroke: black.transparentize(90%) + 0.55pt,

@@ -109,7 +109,7 @@ We successfully simulated the BC547B bipolar characteristics. In the input chara
 
 === Introduction
 
-In this section, we measured the values we simulated earlier. To calculate $I_B$ we measured the voltage drop over the resistor $R_41$ and did the same with $I_C$ and $R_31$ (@fig5). We used that to calculate $beta$ as well as the early voltages at different $I_B$.
+In this section, we measured the values we simulated earlier. To calculate $I_B$ we measured the voltage drop over the resistor $R_41$ and did the same with $I_C$ and $R_31$ (@fig5). We used that to calculate $beta$ as well as the early voltages at different base currents.
 
 === Circuit Diagrams:
 
