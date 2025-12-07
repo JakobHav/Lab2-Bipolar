@@ -25,7 +25,7 @@
 #Amplitude: 15 mV
 #Offset: 0 V
 #Symmetry: 50 %
-#Phase: 0 °
+#Phase: 0
 
 Frequency (Hz)	Channel 1 Magnitude (dB)	Channel 2 Magnitude (dB)	Channel 2 Phase (deg)
 1	-61.46269506906289	12.06502119280652	44.06470091548402
