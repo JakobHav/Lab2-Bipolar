@@ -115,9 +115,6 @@
 #let i4 = i4.map(v => v * 1000)
 #let i5 = i5.map(v => v * 1000)
 
-#let x0 = range(-40, 8)
-#let y0 = x0.map(x => 1000 * (8.19978e-4 * x + 0.00917))
-
 #figure(caption: [Simulated current through $R_C$ plotted over collector-emitter voltage])[
   #lq.diagram(
     width: 80%,
@@ -172,6 +169,5 @@
     lq.plot(v2, i2, mark: ".", label: [13.2], mark-size: 0pt),
     lq.plot(v1, i1, mark: ".", label: [3.6], mark-size: 0pt),
     lq.plot(v0, i0, mark: ".", label: [0.0], mark-size: 0pt),
-    lq.plot(x0, y0, mark: ".", label: [0.0], mark-size: 0pt),
   )
 ] <fig4>
