@@ -209,10 +209,12 @@ Most characteristics were similar to the simulation, however we could not see be
 
 === Text Questions:
 
-To calculate the amplification gain, we calulated: $20 dot log_10(V_"in" / V_"out") approx$ 40.51 dbV
+To calculate the amplification gain for the given system, we calculated the gain between the max input and output voltage (so the difference in amplitudes):
+
+$ "Amplification" = 20 dot log_10(max(V_"out") / max(V_"int"))approx 20 dot log_10(1.592 / 0.015) approx 40.51 "dB" $
 
 (i)
-Amplification of 41.69 dbV
+Amplification of 41.69 dB
 
 
 === Conclusion
