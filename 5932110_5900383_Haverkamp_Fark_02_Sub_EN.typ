@@ -209,13 +209,23 @@ Most characteristics were similar to the simulation, however we could not see be
 
 === Text Questions:
 
-To calculate the amplification gain for the given system, we calculated the gain between the max input and output voltage (so the difference in amplitudes):
+We calculated phase shift of $R_51$ to be $Phi(R_51) approx 172.75 degree$ and phase shift of $R_48$ to be $Phi(R_48) approx 181 degree$.
 
-$ "Amplification" = 20 dot log_10(max(V_"out") / max(V_"int"))approx 20 dot log_10(1.592 / 0.015) approx 40.51 "dB" $
+To calculate the amplification gain for the given system, we calculated the gain between the maximum input and output voltage (so the difference in amplitudes):
 
-(i)
-Amplification of 41.69 dB
+$
+  "Amplification" R_48 = 20 dot log_10(max(V_"out") / max(V_"int"))approx 20 dot log_10((1.592 space"V") / (0.015 space "V")) approx 40.51 "dB"
+$
+$
+  "Amplification" R_51 = 20 dot log_10(max(V_"out") / max(V_"int"))approx 20 dot log_10((0.843 space "V") / (0.015 space "V")) approx 34.62 "dB"
+$
 
+With the spectrum analysis, we got amplification values of:
+$ R_48": " 41.69 "dB" \ R_51": " 36.33 "dB" $
+
+With the small signal analysis, we calculated the gain and phase shift at 10kHz to be: $ R_48": " 41.15 "dB and" 111.07 degree \ R_51": " 35.53 "dB and" 176.11#sym.degree $
+
+All calculated values are very similar, and also show in the graph.
 
 === Conclusion
 

@@ -1,9 +1,12 @@
 #import "@preview/lilaq:0.5.0" as lq
-#let (t, vi, vo) = lq.load-txt(read("assets/2.3.2.CEA_C1.out.txt"), delimiter: "\t", skip-rows: 24)
+#let (t, vi, vo) = lq.load-txt(read("assets/2.3.2.CEA_C1.out_R51.txt"), delimiter: "\t", skip-rows: 24)
 
-#let (freq, ch1, ch2, phase) = lq.load-txt(read("assets/2.3.2.network.48.txt"), delimiter: "\t", skip-rows: 30)
 #let (freq, ch1, ch2, phase) = lq.load-txt(read("assets/2.3.2.network.48_neu.txt"), delimiter: "\t", skip-rows: 21)
-#let (freq2, ch1_2, ch2_2, phase2) = lq.load-txt(read("assets/2.3.2.network.51.txt"), delimiter: "\t", skip-rows: 21)
+#let (freq2, ch1_2, ch2_2, phase2) = lq.load-txt(
+  read("assets/2.3.2.network.51_neu.txt"),
+  delimiter: "\t",
+  skip-rows: 21,
+)
 
 #let max_vi = 0
 #let max_vo = 0
@@ -24,12 +27,12 @@
 
 #let amp = ()
 #for (out, inn) in ch1.zip(ch2) {
-  amp.push(out - inn)
+  amp.push(out)
 }
 
 #let amp2 = ()
 #for (out, inn) in ch1_2.zip(ch2_2) {
-  amp2.push(out - inn)
+  amp2.push(out)
 }
 
 #let freq = freq.map(x => x * 1e-3)
@@ -46,7 +49,7 @@
     // title: [],
     xlabel: [*Frequency* [kHz]],
     ylabel: [*Amplification* [dB]],
-    legend: (position: center + top, dx: -37pt, dy: -12pt, stroke: none),
+    legend: (position: center + bottom, dx: -0pt, dy: -0pt, stroke: none),
     xlim: (0.5 / 1000, 100 * 1.4),
     // xscale: "log",
     xscale: lq.scale.log(base: 2),
@@ -81,31 +84,31 @@
 
     cycle: (
       it => {
-        set lq.style(fill: blue.darken(10%), stroke: (thickness: 1pt))
+        set lq.style(fill: blue.darken(-20%).transparentize(0%), stroke: (thickness: 1pt))
         it
       },
       it => {
-        set lq.style(fill: red.darken(10%), stroke: (thickness: 1pt))
+        set lq.style(fill: red.darken(-20%).transparentize(0%), stroke: (thickness: 1pt))
         it
       },
       it => {
-        set lq.style(fill: blue.darken(-20%), stroke: (thickness: 1pt, dash: "dashed"))
+        set lq.style(fill: blue.darken(20%).transparentize(30%), stroke: (thickness: 1pt, dash: "dashed"))
         it
       },
       it => {
-        set lq.style(fill: red.darken(-20%), stroke: (thickness: 1pt, dash: "dashed"))
+        set lq.style(fill: red.darken(20%).transparentize(30%), stroke: (thickness: 1pt, dash: "dashed"))
         it
       },
     ),
 
 
     lq.plot(freq, amp, mark: ".", label: [Amp. $R_48$], mark-size: 0pt),
-    // lq.plot(freq2, amp2, mark: ".", label: [Amp. $R_51$], mark-size: 0pt),
+    lq.plot(freq2, amp2, mark: ".", label: [Amp. $R_51$], mark-size: 0pt),
     lq.yaxis(
       position: right,
       label: [*Phase* [deg]],
       lq.plot(freq, phase, mark: ".", label: [Phase $R_48$], mark-size: 0pt),
-      // lq.plot(freq2, phase2, mark: ".", label: [Phase $R_51$], mark-size: 0pt),
+      lq.plot(freq2, phase2, mark: ".", label: [Phase $R_51$], mark-size: 0pt),
     ),
   )
 ]
