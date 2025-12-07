@@ -179,19 +179,20 @@ Most characteristics were similar to the simulation, however we could not see be
 == 2.3.1 Simulation
 
 === Introduction
-
+In this section we used a common emitter amplifier to amplify a small AC signal and plot the amplification and phase shift of this signal. We simulated the circuit @fig9 using two different resistors $R_E$.
 === Circuit Diagrams:
 
 #figure(caption: [LTSpice circuit diagram for the common emitter amplifier])[
   #image("assets/2.3.1.circuit.jpg", width: 62%)
-]
+  
+]<fig9>
 
 === Plots:
 
 #include "1.3.plot_sim.typ"
 
 === Text Questions:
-
+The 
 === Conclusion:
 
 = 2.3.2. Measurement
